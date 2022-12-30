@@ -1,0 +1,18 @@
+{
+    "IMG_PATH": "cv.jpg",
+    "SAVE_PATH": "video_config.json",
+    "QUIT_KEY": "q",
+    "ZOOM_IN_KEY": "w",
+    "ZOOM_OUT_KEY": "e",
+    "DEL_KEY": "r",
+    "DEV": true,
+    "WIDTH": 1920,
+    "HEIGHT": 1080,
+    "RESCALE_RATIO": 0.8,
+    "DISPLAY_RESIZE": true,
+    "CAMERA_INDEX": 0,
+    "RECTANGLE_LINE_THICKNESS": 2,
+    "RECTANGLE_LINE_COLOR_RED": 255,
+    "RECTANGLE_LINE_COLOR_GREEN": 0,
+    "RECTANGLE_LINE_COLOR_BLUE": 0
+}
