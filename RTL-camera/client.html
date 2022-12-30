@@ -1,0 +1,46 @@
+GNU nano 2.9.3 templates/sfindex.html
+
+<html>
+
+<head>
+    <title> RTL Camera</title>
+</head>
+      
+<body>
+    <div id="div1">
+        <p id="counter">1</p>
+    </div>
+    <img id="1" width="512" height="512">
+    <br>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+        integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+        console.log('entered')
+        const socket = io('127.0.0.1:5000', {
+            'reconnection': true,
+            'reconnectionDelay': 500,
+        });
+        console.log('connected')
+        var gmsg = ''
+        socket.on('browser', function (msg) {
+            k = "1";
+            const image_element = document.getElementById(k);
+            image_element.src = "data:image/jpeg;base64," + msg;
+        });
+        socket.on('connection', function () {
+            console.log('connection established');
+        });
+
+        var seconds = 0;
+        var el = document.getElementById('counter');
+
+        function incrementSeconds() {
+            seconds += 1;
+            el.innerText = "You have been here for " + seconds + " seconds.";
+        }
+
+        var cancel = setInterval(incrementSeconds, 1000);
+    </script>
+</body>
+
+</html>
